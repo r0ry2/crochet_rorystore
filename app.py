@@ -103,28 +103,11 @@ app.config["SECRET_KEY"] = os.getenv(
 # ==================================================
 # 🗄️ Database Configuration
 # ==================================================
-database_url = os.getenv(
-    "DATABASE_URL"
-)
+database_url = os.getenv("DATABASE_URL")
 
 if database_url:
-    database_url = database_url.replace(
-        "postgres://",
-        "postgresql://",
-        1
-    )
-    app.config[
-        "SQLALCHEMY_DATABASE_URI"
-    ] = database_url
-else:
-    app.config[
-        "SQLALCHEMY_DATABASE_URI"
-    ] = "sqlite:///data.sqlite"
-
-app.config[
-    "SQLALCHEMY_TRACK_MODIFICATIONS"
-] = False
-
+    database_url = database_url.replace("postgres://", "postgresql://", 1)
+    app.config["SQLALCHEMY_DATABASE_URI"]
 # ==================================================
 # 📧 Mail Configuration (Gmail SMTP)
 # ==================================================
