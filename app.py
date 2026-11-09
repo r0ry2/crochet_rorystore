@@ -128,6 +128,9 @@ app.config[
 # ==================================================
 # 📧 Mail Configuration (Gmail SMTP)
 # ==================================================
+# ==================================================
+# 📧 Mail Configuration (Gmail SMTP)
+# ==================================================
 app.config["MAIL_SERVER"] = os.getenv("MAIL_SERVER", "smtp.gmail.com")
 app.config["MAIL_PORT"] = int(os.getenv("MAIL_PORT", 465))
 app.config["MAIL_USE_SSL"] = os.getenv("MAIL_USE_SSL", "True").lower() == "true"
